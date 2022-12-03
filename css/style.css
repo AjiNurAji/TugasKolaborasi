@@ -1,0 +1,149 @@
+/* all */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+/* style container background */
+.container {
+  padding: 0 20px;
+  background: #999;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* input box */
+.input-box {
+  background: #fbfbfa;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+
+/* label for input*/
+.label {
+  width: 100%;
+  display: block;
+  padding: 7px 0;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* style input*/
+#input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 7px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid lightgray;
+  transition: all .4s ease;
+}
+
+#input:focus {
+  border: 1px solid #000;
+}
+
+/* button */
+#btn,
+#btn-reset {
+  border: 1px solid #000;
+  outline: none;
+  float: right;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #000;
+  background: transparent;
+  transition: all .4s ease;
+  margin: 0 5px;
+}
+
+#btn-reset {
+  border: 1px solid crimson;
+  color: crimson;
+  margin: 0;
+}
+
+#btn-reset:hover {
+  border: 1px solid crimson;
+  background: crimson;
+  color: #fbfbfa;
+}
+
+#btn:hover {
+  border: 1px solid #000;
+  background: #000;
+  color: #fbfbfa;
+}
+
+/* alert */
+.alert {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.8);
+  transition: all .4s ease;
+}
+
+.alert-box {
+  position: absolute;
+  background: #fbfbfa;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+}
+
+.alert-title {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.alert-title h4 {
+  font-size: 20px;
+}
+
+.alert-title .close span {
+  padding: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.alert-box .alert-body {
+  text-align: left;
+}
+
+.alert-box .alert-body p {
+  font-size: 15px;
+  margin: 7px 0;
+}
+
+.alert.active {
+  opacity: 1;
+  visibility: visible;
+}
